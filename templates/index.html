@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1>Let's go to hike!</h1>
+        <ul>
+            {% for mt in mountains%}
+            <li><a href="/mountain/{{mt}}">{{ mt }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

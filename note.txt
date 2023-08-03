@@ -1,0 +1,24 @@
+1. pip install flask
+2. write api
+-- using gunicorn --
+3. create wsgi.py
+4. run this command: gunicorn --bind 0.0.0.0:1111 wsgi:app
+5. import blueprints -> from flask import Blueprint
+6. create blueprints object -> app_bp = Blueprint("app_bp", __name__) # app_bp = name of blueprint
+7. use blueprints name instead of app.route -> @app_bp.route('/')
+8. register blueprints -> app.register_blueprint(app_bp)
+9. run the blueprints
+
+how to tell the python that is the package -> need __init__.py files (don't need to contain anythings)
+
+
+-- This part later --
+ubuntu -> can't start flask server
+    -> ufw status = check port that flask allow 
+    -> ufw allow {port number} = allow port that flask want to use
+
+sudo apt update
+sudo apt install nginx
+
+pip install gunicorn = install gunicorn
+
